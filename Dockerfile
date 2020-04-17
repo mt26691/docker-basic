@@ -1,3 +1,2 @@
 FROM alpine
-RUN apk update
-RUN apk add git
+RUN apk update && apk add git && apk add vim
