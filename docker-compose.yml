@@ -1,0 +1,11 @@
+version: '3.0'
+services:
+  web:
+    build: .
+    image: mt26691/sample-node:1.3
+    ports:
+      - "3000:3000"
+    depends_on:
+      - nakilab-redis
+  nakilab-redis:
+    image: redis
