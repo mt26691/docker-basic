@@ -1,7 +1,10 @@
 version: '3.0'
 services:
-  web:
+  node-app:
     build: .
+    command: npm start
+    volumes:
+      - .:/usr/src/app
     image: mt26691/sample-node:1.3
     ports:
       - "3000:3000"
